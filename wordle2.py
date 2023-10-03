@@ -1,13 +1,14 @@
 from random import randrange as r
-from tkinter import messagebox
-with open("WordList.txt","r") as f:
+import os
+fp = os.getcwd()
+with open(rf"{fp}\WordList.txt","r") as f:
 	a = f.read().splitlines()
 b=r(0,len(a))
 strword = a[b]
 counter=0
 print(strword)
 word = list(strword)
-#print(word)
+#print(word) uncomment this to see the word chosen
 while counter<6:
 	choice = input("\nEnter Guess:\t").lower()
 	#print(choice)
