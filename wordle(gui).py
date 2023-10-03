@@ -1,12 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
 import wordlemodule as w
+import os
+fp = os.getcwd()
 from random import randrange as r
-with open("WordList.txt","r") as f:
+with open(rf"{fp}\WordList.txt","r") as f:
 	a = f.read().splitlines()
 b=r(0,len(a))
 strword = a[b]
-print(strword)
+#print(strword) uncomment this to see the word(no cheating)
 window = Tk()
 def x(a):messagebox.showerror("ERROR", a)
 window.geometry('660x750')
