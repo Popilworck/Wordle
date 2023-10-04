@@ -1,7 +1,7 @@
 from random import randrange as r
 import os
 fp = os.getcwd()
-with open(rf"{fp}\WordList.txt","r") as f:
+with open(rf"{fp}\wordlelist.txt","r") as f:
 	a = f.read().splitlines()
 b=r(0,len(a))
 strword = a[b]
