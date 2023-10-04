@@ -2,7 +2,8 @@ from tkinter import *
 from tkinter import messagebox
 import wordlemodule as w
 from random import randrange as r
-with open("wordlelist.txt","r") as f:
+from os import getcwd
+with open(f"{getcwd}\wordlelist.txt","r") as f:
 	a = f.read().splitlines()
 b=r(0,len(a))
 strword = a[b]
